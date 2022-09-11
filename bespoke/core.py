@@ -117,7 +117,7 @@ def get_seed(target_size: int, degree_seeds: Dict[int, List[int]],
         if len(sorted_seeds) == 0:
             continue
         while len(sorted_seeds):
-            seed = sorted_seeds.pop()
+            seed = sorted_seeds.pop(0)
             if seed not in used_seeds:
                 used_seeds.add(seed)
                 return seed
